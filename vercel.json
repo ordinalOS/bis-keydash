@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "env": {
+    "CI": "false"
+  },
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
+    },
+    {
+      "src": "proxy-server/proxy-server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/proxy-server/proxy-server.js"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/build/index.html",
+      "continue": true
+    }
+  ]
+}
