@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Loading from '../frame/Loading';
-import UsageChart from '../usageChart/UsageChart';
+import UsageChart from '../chart/UsageChart';
 import moment from 'moment';
 
 interface UsageEntry {

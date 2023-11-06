@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './frame/Header';
 import Footer from './frame/Footer';
-import ApiKeyDetails from './panel/ApiKeyDetails';
-import ApiKeyList from './panel/ApiKeyList';
+import ApiKeyDetails from './dash/ApiKeyDetails';
+import ApiKeyList from './dash/ApiKeyList';
 import './App.scss';
 
 function App() {
